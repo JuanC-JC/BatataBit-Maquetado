@@ -1,0 +1,78 @@
+
+
+/* cambio de header */
+header{
+    height: 480px;
+}
+.header__content h1{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+
+.header__content p{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+/* cambio primera section */
+
+.exchange__text h2{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+
+
+.exchange__text p{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+
+/* cambio segunda section */
+
+.beneficios__text h2{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+
+.beneficios__text p{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+    	/* cambio cards de la segunda section */
+.beneficios__cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    max-width: 900px;
+}
+
+.cards__product{
+    margin: 16px;
+}
+
+/* cambios tercera section */
+
+.women-img-container h2{
+    font-size: 4rem;
+    line-height: 4.2rem;
+    padding-bottom: 0;
+}
+
+
+/* cambios cuarta section */
+.planes__text h2{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+
+.planes__text p{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+
+.planes__cards{
+    overflow-x: unset;
+}

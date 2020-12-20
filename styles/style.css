@@ -30,6 +30,7 @@ html{
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
     /* font-family: 'Inter', sans-serif; */
+    scroll-behavior: smooth;
 }
 
 
@@ -37,6 +38,7 @@ header{
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     min-width: 320px;
     height: 295px;
@@ -57,7 +59,7 @@ header img{
     align-items: center;
     width: 90%;
     min-width: 288px;
-    max-width: 900px;
+    max-width: 454px;
     height: 218px;
     margin-top:33px;
     align-self: center;
@@ -117,6 +119,7 @@ main{
 
 .exchange{
     width: 100%;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,13 +157,37 @@ main{
 }
 
 
-.exchange__valores{
-    text-align: left;
+.exchange__tables{
+    width: 70%;
+    max-width: 500px;
     margin-top: 48px;
-    width: 235px;
+    margin-bottom: 73px;
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 
-.exchange__valores .valores__titulo{
+.exchange__tables::-webkit-scrollbar{
+    background-color: var(--soft-orange);
+    height: 10px;
+}
+
+
+.exchange__tables::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
+  }
+
+.exchange__valores{
+    margin: 0 20px;
+    text-align: left;
+    scroll-snap-align: center;
+    width: 235px;
+    margin-bottom: 10px;
+
+}
+
+.valores__titulo{
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.3rem;
@@ -170,8 +197,11 @@ main{
     padding-left:35px
 }
 
+.valores__titulo--comision{
+    color:var(--secondary-blue);
+}
 
-.exchange__valores .valores__tabla{
+.valores__tabla{
     text-align: left;
     width: 197px;
     height: 157px;
@@ -231,21 +261,359 @@ main{
     background: url(..//assets/icons/trending-up.svg) center/contain no-repeat;
 }
 
-.exchange__valores .valores_nota{
+.valores__nota{
     width: 116px;
     height: 31px;
     padding: 8px;
     border-radius: 8px;
     background-color:var(--soft-orange) ;
     font-family: 'Inter', sans-serif;
-    margin: 0 auto;
     margin-top: 16px;
 }
 
-.exchange__valores .valores_nota p{
+.valores__nota--comision{
+    background-color: var(--soft-blue);
+}
+
+.valores__nota p{
     font-size: 1.2rem; 
 
 }
 
 
 
+
+/*          section beneficios           */
+
+.beneficios{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    background-color: var(--warm-black);
+}
+
+
+.beneficios__logo{
+    position: absolute;
+    top: -12.5px;
+    background: url('../assets/icons/batata.svg') center/contain no-repeat;
+    width: 41px;
+    height: 25px;
+}
+
+/*          beneficios texto        */
+.beneficios__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    width: 90%;
+}
+
+.beneficios__text h2{
+    max-width: 466px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+
+}
+
+.beneficios__text p{
+    margin-top: 24px;
+    max-width: 466px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+
+/*          cards de producto           */
+.beneficios__cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    min-width: 288px;
+    margin-bottom: 20px;
+}
+
+.cards__product{
+    width: 100%;
+    max-width: 345px;
+    min-height: 152px;
+    padding: 14px 20px 22px 16px;
+    margin-bottom: 16px;
+    background-color: var(--black);
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.16);
+}
+
+.product__logo{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.product__title{
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--just-white);
+}
+
+.product__info{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color:grey;
+}
+
+.product__logo--clock{
+    background: url(../assets/icons/clock.svg) center/contain no-repeat;
+}
+
+.product__logo--eye{
+    background: url(../assets/icons/eye.svg) center/contain no-repeat;
+}
+
+.product__logo--dollar{
+    background: url(../assets/icons/dollar-sign.svg) center/contain no-repeat;
+}
+
+.product__logo--check{
+    background: url(../assets/icons/check-circle.svg) center/contain no-repeat;
+}
+
+
+
+/* seccion comodin imagen mujer */
+
+.women-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    width: 100%;
+    height: 299px;
+    background: url(../assets/img/bitcoinbaby2x.jpg) center/cover no-repeat;
+}
+
+.women-img-container h2{
+    text-align: center;
+    font-style: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--just-white);
+
+}
+
+
+/*      section planes        */
+
+
+.planes{
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #E5E5E5;
+}
+
+
+.planes__text{
+    width: 90%;
+    max-width: 466px;
+    margin-top: 82px;
+}
+
+.planes__text h2{
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warm-black);
+}
+
+.planes__text p{
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+
+.planes__cards{
+    display: flex;
+    width: 90%;
+    max-width: 800px;
+    /* no aplica el gap para todos los navegadores    gap: 50px; */
+    padding-top: 50px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin-bottom: 20px;
+
+}
+
+.planes__cards::-webkit-scrollbar{
+    background-color: var(--soft-orange);
+    height: 10px;
+}
+
+
+.planes__cards::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
+  }
+
+.cards__plan{
+    position: relative;
+
+    scroll-snap-align: center;
+
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 31px ;
+    padding-bottom: 24px;
+    margin-bottom:10px;
+
+    min-width: 190px;
+    height: 247px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+
+}
+
+
+.plan__recomendado{
+    position: absolute;
+    top: -15px;
+    width: 101px;
+    height: 31px;
+    background-color: var(--bitcoin-orange);
+    padding:8px;
+    color:var(--just-white);
+    border-radius: 8px;
+
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.plan__title{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan__valor{
+    position: relative;
+    margin-top: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+}
+
+.plan__valor span{
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:#363636;
+}
+
+.plan__nota{
+    margin-top: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:#757575;
+
+}
+
+
+.plan__button-selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    width: 151px;
+    height: 48px;
+
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: var(--warm-black);
+
+    background-color: var(--just-white);
+    border:2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+}
+
+.plan__button-selection span{
+
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    background: url(../assets/icons/orange-right-arrow.svg) center/contain no-repeat;
+
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 320px;
+    height: 100px;
+    background-color: var(--bitcoin-orange);
+}
+
+.footer__menu{
+    list-style: none;
+}
+
+.footer__menu li{
+    margin-bottom: 5px;
+}
+
+.footer__menu li a{
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--just-white);
+    text-decoration: none;
+
+}
+
+
+.footer__img{
+    width: 64px;
+    height: 50px;
+}
